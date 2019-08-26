@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>document</title>
+</head>
+<body>
+		<div id="app">
+				<div class="js-page-index">
+					<div>
+						<input type="text" class="js-text" />
+						<input type="button" value="Search" class="c-btn js-searchTrigger" />
+						<ul class="p-suggestList js-suggestList"></ul>
+					</div>
+					<ul class="js-searchList"></ul>
+					<div class="js-pageList"></div>
+				</div>
+				<div class="js-page-detail">
+					<h2>詳細</h2>
+					<div class="js-detail"></div>
+					<button onClick="history.back()">back</button>
+				</div>
+			</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+<style>
+button[aria-selected]{
+	font-weight: bold;
+}
+.p-suggestList{
+	position: absolute;
+	background: white;
+	border: 1px solid #CCC;
+	border-bottom: none;
+}
+.p-suggestList{
+	list-style-type: none;
+	border-bottom: 1px solid #CCC;
+	padding: 0;
+	
+}
+.p-suggestList li{
+	padding:10px;
+	border: 1px solid #CCC
+}
+.p-suggestList li.is-selected{
+	background: #CCC
+}
+</style>
+</body>
+</html>
